@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    @IBOutlet weak var hideRedBird: UIButton!
+    @IBOutlet weak var hideBlueBird: UIButton!
+    
+    @IBOutlet weak var blueBird: UIImageView!
+    @IBOutlet weak var redBird: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +26,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func hideBlue(sender: AnyObject) {
+        blueBird.hidden = true
+        redBird.hidden = false
+    }
+
+    @IBAction func hideRed(sender: AnyObject) {
+        redBird.hidden = true
+        blueBird.hidden = false
+    }
+   
+    
+    
 
 
 }
